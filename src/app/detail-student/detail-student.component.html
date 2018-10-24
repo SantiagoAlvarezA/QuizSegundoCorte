@@ -1,0 +1,23 @@
+<ng-container *ngFor="let st of students">
+
+
+    <div class="container home-container" *ngIf="st.id == id_student">
+        <div class="row">
+            <div class="col-4">
+                <img src="{{st.url}}" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-header">
+                        Datos Personales
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{st.profetion}}</h5>
+                        <p class="card-text">{{st.name}} - {{st.lastname}}</p>
+                        <a routerLink="/listStudents" class="btn btn-primary">Regresar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

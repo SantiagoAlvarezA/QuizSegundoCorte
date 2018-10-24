@@ -1,0 +1,28 @@
+<div class="container home-container">
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let student of students">
+                        <tr>
+                            <th scope="row">{{student.id}}</th>
+                            <td>{{student.name}}</td>
+                            <td>{{student.lastname}}</td>
+                            <td>
+                                <a class="btn btn-info" routerLink="/detailStudent/{{student.id}}" role="button">Ver información</a>
+                            </td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
